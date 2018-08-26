@@ -3,6 +3,46 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  
   <display-name>Archetype Created Web Application</display-name>
+    <context-param>
+        <param-name>renmin</param-name>
+        <param-value>人民</param-value>
+    </context-param>
+  <servlet>
+    <servlet-name>implementServlet</servlet-name>
+      <servlet-class>com.timo.servlet.ImplementServlet</servlet-class>
+      <init-param>
+      <param-name>name</param-name>
+      <param-value>ouyangfeng</param-value>
+    </init-param>
+      <init-param>
+      <param-name>age</param-name>
+      <param-value>18</param-value>
+    </init-param>
+      <init-param>
+      <param-name>location</param-name>
+      <param-value>彭塔乡</param-value>
+    </init-param>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+    <servlet>
+        <servlet-name>extendsGenericServlet</servlet-name>
+        <servlet-class>com.timo.servlet.ExtendsGenericServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>extendsHttpServlet</servlet-name>
+        <servlet-class>com.timo.servlet.ExtendsHttpServlet</servlet-class>
+    </servlet>
+  <servlet-mapping>
+    <servlet-name>implementServlet</servlet-name>
+    <url-pattern>/a/b/c</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>extendsGenericServlet</servlet-name>
+        <url-pattern>/d/e/f</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>extendsHttpServlet</servlet-name>
+        <url-pattern>/*</url-pattern>
+    </servlet-mapping>
 </web-app>
