@@ -8,6 +8,14 @@
         <param-name>renmin</param-name>
         <param-value>人民</param-value>
     </context-param>
+    <filter>
+        <filter-name>helloWorldFilter</filter-name>
+        <filter-class>com.timo.filter.HelloWorldFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>helloWorldFilter</filter-name>
+        <url-pattern>/a/b/c</url-pattern>
+    </filter-mapping>
   <servlet>
     <servlet-name>implementServlet</servlet-name>
       <servlet-class>com.timo.servlet.ImplementServlet</servlet-class>
@@ -45,4 +53,5 @@
         <servlet-name>extendsHttpServlet</servlet-name>
         <url-pattern>/*</url-pattern>
     </servlet-mapping>
+
 </web-app>
