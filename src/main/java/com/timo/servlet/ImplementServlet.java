@@ -28,7 +28,8 @@ public class ImplementServlet implements Servlet {
         Enumeration<String> initParameterNames = servletConfig.getInitParameterNames();
         while (initParameterNames.hasMoreElements()){
             String element = initParameterNames.nextElement();
-            System.out.println("element="+element);
+            String value = servletConfig.getInitParameter(element);
+            System.out.println(element+"="+value);
         }
     }
 

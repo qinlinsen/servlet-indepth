@@ -16,6 +16,9 @@
         <filter-name>helloWorldFilter</filter-name>
         <url-pattern>/a/b/c</url-pattern>
     </filter-mapping>
+    <listener>
+        <listener-class>com.timo.listener.MyServletListener</listener-class>
+    </listener>
   <servlet>
     <servlet-name>implementServlet</servlet-name>
       <servlet-class>com.timo.servlet.ImplementServlet</servlet-class>
@@ -43,7 +46,7 @@
     </servlet>
   <servlet-mapping>
     <servlet-name>implementServlet</servlet-name>
-    <url-pattern>/a/b/c</url-pattern>
+    <url-pattern>/*</url-pattern>
   </servlet-mapping>
     <servlet-mapping>
         <servlet-name>extendsGenericServlet</servlet-name>
@@ -51,7 +54,7 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>extendsHttpServlet</servlet-name>
-        <url-pattern>/*</url-pattern>
+        <url-pattern>/a/b/c</url-pattern>
     </servlet-mapping>
 
 </web-app>
